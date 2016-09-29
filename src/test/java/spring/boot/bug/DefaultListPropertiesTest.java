@@ -25,7 +25,7 @@ public class DefaultListPropertiesTest {
 	@Test
 	public void listEqualsConfiguredList() {
 		assertEquals("bar", properties.getConfiguredList().get(0));
-		assertEquals(1, properties.getConfiguredList());
+		assertEquals(1, properties.getConfiguredList().size());
 	}
 
 }
