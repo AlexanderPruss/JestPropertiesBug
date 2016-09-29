@@ -1,7 +1,6 @@
 spring:
   profiles:
     default: local
-  elasticsearch:
-      jest:
-        uris:
-          - http://localhost:9200
+defaultListProperties:
+  configuredList:
+    - bar

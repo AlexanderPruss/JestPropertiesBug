@@ -27,8 +27,9 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile "org.springframework.boot:spring-boot-starter:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-configuration-processor:${springBootVersion}"
+	testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
 
     compile "org.elasticsearch:elasticsearch:2.3.2"
     compile "io.searchbox:jest:2.0.3"
