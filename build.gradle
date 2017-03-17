@@ -6,13 +6,22 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+	  classpath "net.researchgate:gradle-release:2.4.0"
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
+apply plugin: 'net.researchgate.release'
+
+release {
+failOnUnversionedFiles = false
+  git{
+    requireBranch = ""
+  }
+}
 
 jar {
 	baseName = 'jestpropertiesbug'
